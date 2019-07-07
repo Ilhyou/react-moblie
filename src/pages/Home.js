@@ -15,13 +15,13 @@ class Home extends Component {
   componentDidMount() {
     getGoods().then(res => {
       this.setState({
-        sliderlist: res.data.message.sliderlist,
-        toplist: res.data.message.toplist
+        sliderlist: res.sliderlist,
+        toplist: res.toplist
       });
     });
     getGoodsGroup().then(res => {
       this.setState({
-        goodsgrouplist: res.data.message
+        goodsgrouplist: res
       });
     });
   }
