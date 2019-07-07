@@ -28,6 +28,7 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
+        <h1 onClick={()=>this.props.history.push("/GoodsDetail/100")}>跳转</h1>
         <Carousel autoplay={true} infinite>
           {this.state.sliderlist.map(val => (
             <a
